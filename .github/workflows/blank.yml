@@ -51,7 +51,8 @@ jobs:
       - name: Release file
         uses: ncipollo/release-action@v1
         with:
-          artifact: "dist.zip"
+          artifacts: "dist.zip"
+          body: Release ID ${{github.run_id}}
           token: ${{ secrets.GITHUB_TOKEN }}
           # Name of Release to add file to
           tag: ${{github.run_id}}
