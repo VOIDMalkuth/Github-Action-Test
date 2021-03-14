@@ -52,7 +52,7 @@ jobs:
         uses: djnicholson/release-action@v2.10
         with:
           # GitHub auth token
-          token: ${{ACCESS_TOKEN}}
+          token: ${{secrets.ACCESS_TOKEN}}
           # Name of Release to add file to
           release-name: ${{github.head_ref}}
           # Name of the tag for the release (will be associated with current branch)
