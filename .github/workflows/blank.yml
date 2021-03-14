@@ -47,9 +47,9 @@ jobs:
         run: npm run build
       - name: Zip
         run: zip dist.zip -r ./dist
+      
       - name: Release file
-
-      - uses: djnicholson/release-action@v2.10
+        uses: djnicholson/release-action@v2.10
         with:
           # GitHub auth token
           token: ${{ACCESS_TOKEN}}
